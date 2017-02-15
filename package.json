@@ -1,0 +1,35 @@
+{
+  "name": "drink-solo-project",
+  "version": "1.0.0",
+  "description": "full stack solo project, water tracker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pyg4732/drink-water-tracker-solo-project.git"
+  },
+  "keywords": [
+    "full",
+    "stack",
+    "angular",
+    "particle",
+    "photon",
+    "solo",
+    "project",
+    "prime"
+  ],
+  "author": "priscillayg23@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pyg4732/drink-water-tracker-solo-project/issues"
+  },
+  "homepage": "https://github.com/pyg4732/drink-water-tracker-solo-project#readme",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "pg": "^6.1.2"
+  }
+}
