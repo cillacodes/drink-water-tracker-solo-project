@@ -8,7 +8,7 @@ app.config(function($routeProvider, $locationProvider) {
     templateUrl: 'views/daily-log.html'
   }).when('/profile', {
     templateUrl: 'views/profile.html'
-  });
+  }); 
   $locationProvider.html5Mode(true);
 }); //end app.config
 
