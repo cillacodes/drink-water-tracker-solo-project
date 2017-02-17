@@ -15,8 +15,6 @@ connection.connect();
 
 var app = express();
 
-app.use(bodyParser.json());
-
 app.use(express.static('public'));
 
 app.use('/', index);
@@ -32,6 +30,7 @@ var sessionConfig = {
     secure: false
   }
 }
+
 app.use(session(sessionConfig));
 app.use(bodyParser.json());
 app.use(express.static('public'));
@@ -65,7 +64,6 @@ function ensureAuthenticated(req, res, next) {
 app.get('/*', function(req, res){
   res.sendFile(path.join(__dirname, 'public/views/index.html'));
 });
-
 
 var port = process.env.PORT || 3000;
 var server = app.listen(port, function() {

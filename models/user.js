@@ -1,8 +1,8 @@
-var pool = require('../db/connection');
-var bcrypt = require('bcrypt');
+var pool = require("../db/connection");
+var bcrypt = require("bcrypt");
 var SALT_ROUNDS = 10;
 
-//find by username
+// find by username
 exports.findByUsername = function(username) {
   return query("SELECT * FROM users WHERE username = $1", [ username ])
     .then(function(users) {
@@ -24,7 +24,10 @@ exports.findById = function(id) {
     });
 };
 
-//compare password
+// compare password
+// takes a username and a password, looks up the user by the given username
+// and returns promise which resolves to a boolean indicating whether the
+// passwords matched
 exports.findAndComparePassword = function(username, password) {
   return exports.findByUsername(username).then(function(user) {
     return bcrypt
@@ -54,6 +57,25 @@ exports.create = function(username, password) {
     });
 };
 
+// exports.create('test', '1234').then(function() {
+//   console.log('Created a test user');
+// });
+// exports.findByUsername('test').then(function(user){
+//   console.log(user);
+// })
+// exports.findById('2').then(function(user){
+//   console.log(user);
+// });
+// exports.findAndComparePassword("test", "12345").then(function(match) {
+//   console.log("Passwords match", match);
+// });
+// query("SELECT * FROM users")
+//   .then(function(result) {
+//     console.log(result.rows);
+//   })
+//   .catch(function(err) {
+//     console.log("Error running test query", err);
+//   });
 function query(sqlString, data) {
   return new Promise(function(resolve, reject) {
     pool.connect(function(err, client, done) {
@@ -75,3 +97,4 @@ function query(sqlString, data) {
     });
   });
 }
+//
