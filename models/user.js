@@ -57,25 +57,6 @@ exports.create = function(username, password) {
     });
 };
 
-// exports.create('test', '1234').then(function() {
-//   console.log('Created a test user');
-// });
-// exports.findByUsername('test').then(function(user){
-//   console.log(user);
-// })
-// exports.findById('2').then(function(user){
-//   console.log(user);
-// });
-// exports.findAndComparePassword("test", "12345").then(function(match) {
-//   console.log("Passwords match", match);
-// });
-// query("SELECT * FROM users")
-//   .then(function(result) {
-//     console.log(result.rows);
-//   })
-//   .catch(function(err) {
-//     console.log("Error running test query", err);
-//   });
 function query(sqlString, data) {
   return new Promise(function(resolve, reject) {
     pool.connect(function(err, client, done) {

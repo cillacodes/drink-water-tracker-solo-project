@@ -16,7 +16,7 @@ connection.connect();
 var app = express();
 
 app.use(express.static('public'));
-
+app.use(bodyParser.json());
 app.use('/', index);
 app.use('/*', index);
 
@@ -32,7 +32,7 @@ var sessionConfig = {
 }
 
 app.use(session(sessionConfig));
-app.use(bodyParser.json());
+
 app.use(express.static('public'));
 app.use(passport.initialize());
 app.use(passport.session());

@@ -1,11 +1,26 @@
 <h2>Home</h2>
 
+<main >
 <header>
   <nav>
     <ul>
       <li><a href="/daily-log">Daily Log</a></li>
       <li><a href="/profile">Profile</a></li>
     </ul>
+    <button class="logout" ng-click="home.logout()">Logout</button>
   </nav>
 </header>
-<button ng-click="home.logout()" >Logout</button>
+</main>
+
+<input ng-model='ozIn' type="number" name="volume" min="1" max="24" placeholder="oz">
+<button ng-click="home.addIntake(ozIn)" class="addOne">Add</button>
+
+
+
+
+
+
+
+<!-- <modal-dialog show="modalShown" dialog-title="Add water here" width="750px" height="90%">
+<p></p>
+</modal-dialog> -->

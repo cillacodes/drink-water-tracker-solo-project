@@ -28,12 +28,14 @@
   "homepage": "https://github.com/pyg4732/drink-water-tracker-solo-project#readme",
   "dependencies": {
     "angular": "^1.6.2",
+    "angular-modal-service": "^0.10.1",
     "angular-route": "^1.6.2",
     "bcrypt": "^1.0.2",
     "body-parser": "^1.16.1",
     "bootstrap": "^3.3.7",
     "express": "^4.14.1",
     "express-session": "^1.15.1",
+    "ngmodal": "^2.0.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "pg": "^6.1.2"
