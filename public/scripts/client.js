@@ -14,11 +14,12 @@ var testy = angular
         templateUrl: "views/register.html",
         controller: "RegisterController as register"
       })
-      .when('/daily-log', {
-       templateUrl: 'views/daily-log.html'
+      .when('/dailyLog', {
+       templateUrl: 'views/dailyLog.html',
+       controller: "DailyController as daily"
       })
-      .when('/profile', {
-       templateUrl: 'views/profile.html'
+      .when('/settings', {
+       templateUrl: 'views/settings.html'
      }).when('/intake', {
         controller: "HomeController as home"
       }).otherwise({

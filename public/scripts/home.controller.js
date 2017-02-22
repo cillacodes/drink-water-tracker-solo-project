@@ -1,7 +1,7 @@
 angular.module('waterApp').controller('HomeController', function($scope, $http, $location){
-  this.addIntake = function(volume) {
 
-      //when user clicks "add" button, add to databaseå
+  this.addIntake = function(volume) {
+    //when user clicks "add" button, add to databaseå
     console.log('in add intake!', $scope.ozIn );
 
     // put user input into an object
@@ -10,7 +10,7 @@ angular.module('waterApp').controller('HomeController', function($scope, $http, 
       volume: $scope.ozIn
     };
 
-      // send object to database
+    // send object to database
     return $http.post('/addIntake', objToSend ).then(function(response) {
       console.log('Success adding intake', response);
     }).catch(function(err) {
