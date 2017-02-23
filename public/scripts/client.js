@@ -1,48 +1,54 @@
 //routing
 angular
-  .module("waterApp", ['ngRoute'])
-  .config(function($routeProvider, $locationProvider) {
-    $locationProvider.html5Mode(true);
+.module("waterApp", ['ngRoute'])
+.config(function($routeProvider, $locationProvider) {
+  $locationProvider.html5Mode(true);
 
-    $routeProvider
-      .when("/home", {
-        templateUrl: "views/home.html",
-        controller: "HomeController as home",
-        authRequired: true
-      })
-      .when("/newUser", {
-        templateUrl: "views/register.html",
-        controller: "RegisterController as register"
-      })
-      .when('/dailyLog', {
-       templateUrl: 'views/dailyLog.html',
-       controller: "DailyController as daily"
-      })
-      .when('/settings', {
-       templateUrl: 'views/settings.html'
-     }).when('/intake', {
-        controller: "HomeController as home"
-      }).otherwise({
-        templateUrl: "views/login.html",
-        controller: "LoginController as login"
-      });
+  $routeProvider
+  .when("/home", {
+    templateUrl: "views/home.html",
+    controller: "HomeController as home",
+    authRequired: true
   })
-  .run(function($rootScope, $location, $route, AuthService) {
-    $rootScope.$on("$routeChangeStart", function(event, next, current) {
-      AuthService.checkLoginStatus().then(function(loggedIn) {
-        console.log(loggedIn);
-        if (next.authRequired && !loggedIn) {
-          $location.path("/login");
-          $route.reload();
-        }
-      });
+  .when("/newUser", {
+    templateUrl: "views/register.html",
+    controller: "RegisterController as register"
+  })
+  .when('/dailyLog', {
+    templateUrl: 'views/dailyLog.html',
+    controller: "DailyController as daily"
+  })
+  .when('/settings', {
+    templateUrl: 'views/settings.html'
+  })
+  .when('/intake', {
+    controller: "HomeController as home"
+  })
+  .when('/weeklyLog', {
+    templateUrl: 'views/weeklyLog.html',
+    controller: "TotalController as total"
+  })
+  .otherwise({
+    templateUrl: "views/login.html",
+    controller: "LoginController as login"
+  });
+})
+
+.run(function($rootScope, $location, $route, AuthService) {
+  $rootScope.$on("$routeChangeStart", function(event, next, current) {
+    AuthService.checkLoginStatus().then(function(loggedIn) {
+      console.log(loggedIn);
+      if (next.authRequired && !loggedIn) {
+        $location.path("/login");
+        $route.reload();
+      }
     });
   });
+});
 
 
 
-
-
+//alternate app config
 // var app = angular.module('passportApp', ['ngRoute']);
 // console.log('Water tracker is ready');
 //

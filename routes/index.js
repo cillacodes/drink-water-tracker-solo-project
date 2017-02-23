@@ -43,7 +43,7 @@ router.get('/total', function(req, res) {
         console.log('Error connecting to DB, err');
         res.status(500).send(err);
       } else {
-        client.query('SELECT date, volume FROM intake ORDER BY date;', function(err, results) {
+        client.query('SELECT date, SUM(volume) as total FROM intake GROUP BY date;', function(err, results) {
           if (err) {
             console.log('Error getting intake', err);
             res.status(500).send(err);
