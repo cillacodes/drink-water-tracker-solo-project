@@ -35,6 +35,29 @@ router.get('/daily', function(req, res) {
   });
 }); //end router.get
 
+router.get('/total', function(req, res) {
+
+  pool.connect(function(err, client, done) {
+    try {
+      if (err) {
+        console.log('Error connecting to DB, err');
+        res.status(500).send(err);
+      } else {
+        client.query('SELECT date, volume FROM intake ORDER BY date;', function(err, results) {
+          if (err) {
+            console.log('Error getting intake', err);
+            res.status(500).send(err);
+          } else {
+            res.send(results.rows);
+          }
+        });
+      }
+    } finally {
+      done();
+    }
+  });
+}); //end router.get
+
 router.post( '/addIntake', function( req, res ){
   console.log( 'in base url post:', req.body );
   // console.log('req', req);

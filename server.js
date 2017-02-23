@@ -9,6 +9,11 @@ var connection = require('./db/connection');
 var login = require('./routes/login');
 var register = require('./routes/register');
 
+//connection for Particle Photon
+//var Particle = require('particle-api-js');
+//var particle = new Particle();
+
+
 require('./auth/setup');
 
 connection.connect();

@@ -6,12 +6,13 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  /*.yourstyle {
-	background-color: rgba(51,204,255,1.00);
+	/*background-color: rgba(51,204,255,1.00);
 	box-shadow:  0px 0px 0px rgba(0,0,0,1.00);
 	background-image:
 		linear-gradient(49deg, rgba(10,191,193,1.00) 1%, rgba(14,191,204,1.00) 28%, rgba(7,201,132,1.00) 43%, rgba(19,171,110,1.00) 73%, rgba(6,184,110,1.00) 93%);
-}*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
+
 }
 
 h1{
@@ -29,4 +30,54 @@ li {
 
 .logout {
   float: right;
+}
+
+.loginForm {
+  width: 300px;
+  padding: 30px;
+  background: #FFFFFF;
+  margin: 50px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.22);
+
+  /*outline: none;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  margin-bottom: 10px;
+  height: 45px;*/
+}
+
+.loginForm h3 {
+  background: #4D4D4D;
+  text-transform: uppercase;
+  color: #797979;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 20px;
+  margin: -30px -30px 30px -30px;
+}
+
+.loginForm textarea{
+  resize: none;
+  overflow: hidden;
+}
+
+.loginForm input {
+  box-shadow: inset 0 1px 0 0 #45D6D6;
+  background-color: #2CBBBB;
+  border: 1px solid #27A0A0;
+  display: inline-block;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 14px;
+  paddingL 8px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.form-group {
+
 }

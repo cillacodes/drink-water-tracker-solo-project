@@ -36,6 +36,7 @@
     "express": "^4.14.1",
     "express-session": "^1.15.1",
     "ngmodal": "^2.0.1",
+    "particle-api-js": "^6.4.3",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "pg": "^6.1.2"
