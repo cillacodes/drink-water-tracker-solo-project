@@ -1,3 +1,4 @@
+//initial code. sends status when microswitch is pressed
 int button = D2;
 int output = D3;
 int buttonState;
@@ -28,7 +29,7 @@ void loop() {
 }
 
 
-
+//current code flashed to photon. else statement publishes event needed 
 int button = D2;
 int output = D3;
 int buttonState;
