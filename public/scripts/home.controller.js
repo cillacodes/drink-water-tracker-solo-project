@@ -1,6 +1,7 @@
 angular.module('waterApp').controller('HomeController', function($scope, $http, $location){
 
   this.addIntake = function(volume) {
+    
     //when user clicks "add" button, add to database
     console.log('in add intake!', $scope.ozIn );
 
