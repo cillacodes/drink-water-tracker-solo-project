@@ -1,28 +1,26 @@
 <h2>Home</h2>
 
-<main >
-<header>
-  <nav>
+<body>
+  <ul class="navigation">
+    <li class="nav-item"><a href="/home">Home</a></li>
+    <li class="nav-item"><a href="/dailyLog">Daily Log</a></li>
+    <li class="nav-item"><a href="/weeklyLog">Weekly Log</a></li>
+    <li class="nav-item"><a href="/settings">Settings</a></li>
+  </ul>
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger">
+  <label for="nav-trigger"></label>
+  <!-- <nav>
     <ul>
       <li><a href="/dailyLog">Daily Log</a></li>
       <li><a href="/settings">Settings</a></li>
       <li><a href="/weeklyLog">Weekly Log</a></li>
     </ul>
     <button class="logout" ng-click="home.logout()">Logout</button>
-  </nav>
-</header>
-<!-- </main> -->
-
+  </nav> -->
+<div class="site-wrap">
 <input ng-model='ozIn' type="number" name="volume" min="1" max="24" placeholder="oz">
 <button ng-click="home.addIntake(ozIn)" class="addOne">Add</button>
+</div>
 
-
-</main>
-
-
-
-
-
-<!-- <modal-dialog show="modalShown" dialog-title="Add water here" width="750px" height="90%">
-<p></p>
-</modal-dialog> -->
+</body>
