@@ -1,10 +1,10 @@
 
 <h2>Daily Intake Log</h2>
 
-<section id="dailyLog" ng-repeat="intake in daily.intakeList" ng-controller="DailyController as daily">
+<section id="dailyLog" ng-controller="DailyController as daily">
 
 <!-- <li>{{intake.volume}},{{intake.date | date}}, {{intake.time | limitTo: 5}}</li> -->
-  <table class="table table-striped">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th>Volume (in oz)</th>
@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr ng-repeat="intake in daily.intakeList">
         <td>{{intake.volume}}</td>
         <td>{{intake.date | date}}</td>
         <td>{{intake.time | limitTo: 5}}</td>

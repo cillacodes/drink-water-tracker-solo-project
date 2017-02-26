@@ -1,18 +1,18 @@
 <h2>Weekly Intake Log</h2>
 
-<section id="weeklyLog" ng-repeat="totalPerDay in total.totalDailyIntake" ng-controller="TotalController as total">
+<section id="weeklyLog" ng-controller="TotalController as total">
 
-  <table class="table table-striped">
+  <table class="table table-hover">
     <thead>
       <tr>
-        <th>Date</th>
         <th>Volume(in oz)</th>
+        <th>Date</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>{{totalPerDay.date | date}}</td>
+      <tr ng-repeat="totalPerDay in total.totalDailyIntake">
         <td>{{totalPerDay.total}}</td>
+        <td>{{totalPerDay.date | date}}</td>
       </tr>
     </tbody>
   </table>
