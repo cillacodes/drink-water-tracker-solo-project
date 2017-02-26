@@ -1,27 +1,21 @@
+<header class="col-xs-10 col-xs-offset-1">
 <h2>Home</h2>
+</header>
 
-<body>
-  <ul class="navigation">
+<body class="col-xs-10 col-xs-offset-1">
+<nav>
+  <ul id="menu">
     <li class="nav-item"><a href="/home">Home</a></li>
-    <br>
     <li class="nav-item"><a href="/dailyLog">Daily Log</a></li>
-    <br>
     <li class="nav-item"><a href="/weeklyLog">Weekly Log</a></li>
-    <br>
-    <li class="nav-item"><a href="/settings">Settings</a></li>
+    <!-- <li class="nav-item"><a href="/settings">Settings</a></li> -->
+    <!-- <li><button class="logout" ng-click="home.logout()">Logout</button></li> -->
+    <li class="nav-item"><button class="logout" ng-click="home.logout()">Logout</button></li>
   </ul>
+</nav>
 
-  <input type="checkbox" id="nav-trigger" class="nav-trigger">
-  <label for="nav-trigger"></label>
-  <!-- <nav>
-    <ul>
-      <li><a href="/dailyLog">Daily Log</a></li>
-      <li><a href="/settings">Settings</a></li>
-      <li><a href="/weeklyLog">Weekly Log</a></li>
-    </ul>
-    <button class="logout" ng-click="home.logout()">Logout</button>
-  </nav> -->
-<div class="site-wrap">
+
+<div class="ozDiv">
 <input class="ozIn" ng-model="ozIn" type="number" name="volume" min="1" max="24" placeholder="oz">
 <button ng-click="home.addIntake(ozIn)" class="addOne">Submit</button>
 </div>

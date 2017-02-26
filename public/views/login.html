@@ -1,32 +1,20 @@
-<section class="intro">
-  <meta name="viewport" content="initial-scale=1">
+<header class="intro">
+  <!-- <meta name="viewport" content="initial-scale=1"> -->
   <h1>Drink</h1>
 
 
-</section>
+</header>
 <br>
-<!-- class=" loginForm form-horizontal col-xs-12 col-md-6 col-md-offset-3 well" -->
 <section class="loginForm flex">
   <h3>Login to your account</h3>
   <form ng-submit="login.login()">
-    <!-- <div class="form-group row">
-      <div class="col-xs-8"> -->
-        <input type="text" ng-model="login.username" placeholder="Username">
-      <!-- </div>
-    </div> -->
+    <input type="text" ng-model="login.username" placeholder="Username">
     <br>
-
-    <!-- <div class="form-group row">
-      <div class="col-xs-8"> -->
-        <input type="password" ng-model="login.password" placeholder="Password">
-      <!-- </div>
-    </div> -->
+    <input type="password" ng-model="login.password" placeholder="Password">
     <br>
-
-    <!-- <div class="col-xs-offset-3 col-xs-10"> -->
-      <button type="submit" class="btn btn-primary">Login</button>
-      <button><a href="/newUser">Register</a></button>
-    <!-- </div> -->
+    <button type="submit" class="loginButton">Login</button>
+    <br>
+    <span><p>New to Drink? <a href="/newUser"> Register</a> for an account.</p></span>
   </form>
 
 </section>

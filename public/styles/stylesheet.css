@@ -7,29 +7,43 @@ body {
   font-family: 'Josefin Sans';
 }
 
-h1, h2{
+
+h1 {
   text-align: center;
   font-family: 'Josefin Sans';
-  font-size: 40px;
+  font-size: 60px;
   color: white;
 }
 
-li {
-  list-style-type: none;
-  display: inline-block;
-}
-
-input[type=number] {
-  width: 140px;
-  height: 45px;
-  border-radius: 50px 50px 50px 50px;
+h2 {
   text-align: center;
   font-family: 'Josefin Sans';
-  font-size: 25px;
+  font-size: 45px;
+  color: white;
 }
 
-input[type=number]:focus {
-  border: 3px solid #555;
+
+nav {
+  margin: 50px 50px 50px 50px;
+  padding: 50px 5px 50px 50px;
+  width: 50px;
+  float: right;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+li a {
+  display: inline-block;
+  min-width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none;
+  background: #2f3036;
 }
 
 .logout {
@@ -42,16 +56,6 @@ input[type=number]:focus {
   background: #FFFFFF;
   margin: 50px auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.22);
-
-  /*outline: none;
-  display: block;
-  width: 100%;
-  padding: 7px;
-  border: none;
-  border-bottom: 1px solid #ddd;
-  background: transparent;
-  margin-bottom: 10px;
-  height: 45px;*/
 }
 
 .loginForm h3 {
@@ -69,31 +73,76 @@ input[type=number]:focus {
   overflow: hidden;
 }
 
+/*Username and Password inputs on login*/
 .loginForm input {
-  box-shadow: inset 0 1px 0 0 #45D6D6;
-  background-color: #2CBBBB;
-  border: 1px solid #27A0A0;
+  /*box-shadow: inset 0 1px 0 0 #45D6D6;*/
+  /*background-color: #2CBBBB;*/
+  border-bottom: 2px solid #0CBCBC;
   display: inline-block;
   cursor: pointer;
-  color: #FFFFFF;
+  color: black;
   font-size: 14px;
-  paddingL 8px 18px;
+  margin: 10px 20px 10px 20px;
   text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+}
+
+.loginButton {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin: 10px 20px 10px 20px;
+  text-transform: uppercase;
+  background: #56ab2f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #56ab2f , #a8e063); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #56ab2f , #a8e063); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.loginButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: white;
+  transition-duration: 0.4s;
+}
+
+
+.ozDiv {
+  padding: 60px 60px 60px 60px;
+  margin: 50px 50px 50px 50px;
+}
+
+input[type=number] {
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-size: 25px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  margin: 10px 20px 10px 20px;
   text-transform: uppercase;
 }
 
-.form-group {
-
+input[type=number]:focus {
+  border: 3px solid #555;
 }
 
 .addOne {
-  width: 140px;
+  /*width: 140px;
   height: 45px;
   border-radius: 50px 50px 50px 50px;
   text-align: center;
   font-size: 25px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  background-color: #4CAF50;
+  background-color: #4CAF50;*/width: 200px;
+  height: 40px;
+  text-align: center;
+  margin: 10px 20px 10px 20px;
+  text-transform: uppercase;
+  background: #56ab2f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #56ab2f , #a8e063); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #56ab2f , #a8e063); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -106,100 +155,4 @@ input[type=number]:focus {
 /*table styling*/
 .table-hover tbody tr:hover td {
     background: #06B86E;
-}
-
-
-/*nav bar styling*/
-.navigation {
-  list-style: none;
-  background: #111;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.nav-item {
-  width: 200px;
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #000;
-}
-
-.nav-item a {
-  display: block;
-  padding: 1em;
-  background: linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
-  color: white;
-  font-size: 1.2em;
-  text-decoration: none;
-  transition: color 0.2s, background 0.5s;
-}
-
-.nav-item a:hover {
-  color: #c74438;
-  background: linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(75,20,20,0.65) 100%);
-}
-
-/*site wrapper styling*/
-.site-wrap {
-  /*min-width: 100%;
-  min-height: 100%;*/
-  width: 700px;
-  height: 500px;
-  position: relative;
-  top: 0;
-  bottom: 100%;
-  left: 0;
-  z-index: 1;
-  padding: 4em;
-  background-image: linear-gradient(64deg, rgba(22,158,247,1.00) 17%, rgba(30,179,248,1.00) 40%, rgba(22,190,226,1.00) 54%, rgba(21,205,223,1.00) 78%, rgba(10,191,193,1.00) 94%);
-  background-size: 600px;
-}
-
-.nav-trigger {
-  position: absolute;
-  clip: rect(0,0,0,0);
-}
-
-label[for="nav-trigger"] {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 2;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
-  background-size: contain;
-}
-
-.nav-trigger:checked + label {
-  left: 215px;
-}
-
-.nav-trigger:checked ~ .site-wrap {
-  left: 200px;
-  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
-}
-
-.nav-trigger + label, .site-wrap {
-  transition: left 0.2s;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-*,*:before,*:after{
-  box-sizing: border-box;
-  margin:0;
-  padding:0;}
-
-html, body {
-  height: 100%;
-  width: 100%;
 }
