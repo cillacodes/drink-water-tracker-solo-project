@@ -1,7 +1,7 @@
 
 <h2>Daily Intake Log</h2>
 
-<section id="dailyLog" ng-repeat="intake in daily.intakeList" ng-controller="DailyController as daily">
+<section id="dailyLog" ng-repeat="intake in daily.intakeList" ng-controller="DailyController as daily" ng-click="daily.saveData()">
 
 <!-- <li>{{intake.volume}},{{intake.date | date}}, {{intake.time | limitTo: 5}}</li> -->
   <table class="table table-striped">
