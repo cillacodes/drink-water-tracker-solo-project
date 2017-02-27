@@ -1,7 +1,19 @@
-<h2>Weekly Intake Log</h2>
+<body>
+  <header>
+  <nav>
+    <ul>
+      <li class="nav-item"><a href="/home">Home</a></li>
+      <li class="nav-item"><a href="/dailyLog">Daily Log</a></li>
+      <li class="nav-item"><a href="/weeklyLog">Weekly Log</a></li>
+      <li class="nav-item"><button class="logout" ng-click="home.logout()">Logout</button></li>
+    </ul>
+  </nav>
+  </header>
+  <br>
+
+<div class="weeklyDiv"><h2>Weekly Intake Log</h2></div>
 
 <section id="weeklyLog" ng-controller="TotalController as total">
-
   <table class="table table-hover">
     <thead>
       <tr>
@@ -16,5 +28,5 @@
       </tr>
     </tbody>
   </table>
-
 </section>
+</body>

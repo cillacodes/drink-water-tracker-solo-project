@@ -1,9 +1,20 @@
+<body>
+  <header>
+  <nav>
+    <ul>
+      <li class="nav-item"><a href="/home">Home</a></li>
+      <li class="nav-item"><a href="/dailyLog">Daily Log</a></li>
+      <li class="nav-item"><a href="/weeklyLog">Weekly Log</a></li>
+      <li class="nav-item"><button class="logout" ng-click="home.logout()">Logout</button></li>
+    </ul>
+  </nav>
+  </header>
+  <br>
 
-<h2>Daily Intake Log</h2>
+<div class="intakeDiv"><h2>Daily Intake Log</h2></div>
 
 <section id="dailyLog" ng-controller="DailyController as daily">
 
-<!-- <li>{{intake.volume}},{{intake.date | date}}, {{intake.time | limitTo: 5}}</li> -->
   <table class="table table-hover">
     <thead>
       <tr>
@@ -21,3 +32,4 @@
     </tbody>
   </table>
 </section>
+</body>
