@@ -35,13 +35,13 @@ angular.module('waterApp').controller('DailyController', function($http, $locati
     });
 
     ctrl.saveData = function(data) {
-        $http.post('/addIntake', data).then(function(response) {
+        $http.post('/addIntake', objToSend).then(function(response) {
           console.log(response);
           console.log('saved data posting', data);
         });
     };
 
-    ctrl.saveData(objToSend);
+    // ctrl.saveData(objToSend);
   };//end particle
 
   ctrl.particle();
