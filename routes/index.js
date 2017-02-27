@@ -20,7 +20,7 @@ router.get('/daily', function(req, res) {
         console.log('Error connecting to DB, err');
         res.status(500).send(err);
       } else {
-        client.query('SELECT * FROM intake;', function(err, results) {
+        client.query('SELECT * FROM intake ORDER BY date;', function(err, results) {
           if (err) {
             console.log('Error getting intake', err);
             res.status(500).send(err);

@@ -9,6 +9,7 @@ angular.module('waterApp').controller('DailyController', function($http, $locati
   };
 
   ctrl.intakeList = [];
+  var parsedData = null;
 
   ctrl.getIntake = function() {
     DailyService.getIntake().then(function(response) {
@@ -21,7 +22,7 @@ angular.module('waterApp').controller('DailyController', function($http, $locati
 
   ctrl.getIntake();
 
-  var parsedData = null;
+
 
   ctrl.particle = function() {
     var deviceID = "2f0033000547343339373536",
