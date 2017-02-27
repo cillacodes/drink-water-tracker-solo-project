@@ -40,7 +40,7 @@ angular.module('waterApp').controller('DailyController', function($http, $locati
         });
     };
 
-    ctrl.saveData(objToSend | limit: 1);
+    ctrl.saveData(objToSend);
   };//end particle
 
   ctrl.particle();
