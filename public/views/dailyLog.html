@@ -26,6 +26,7 @@
     <tbody>
       <tr ng-repeat="intake in daily.intakeList">
         <td>{{intake.volume}}</td>
+        <!-- add an angular filter to sort here -->
         <td>{{intake.date | date}}</td>
         <td>{{intake.time | limitTo: 5}}</td>
       </tr>
