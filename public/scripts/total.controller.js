@@ -17,16 +17,15 @@ angular.module('waterApp').controller('TotalController', function($http, $locati
 
 
 
-  $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
- $scope.series = ['Series A', 'Series B'];
+  $scope.labels = ["Feb 22", "Feb 23", "Feb 24", "Feb 25", "Feb 26", "Feb 27", "Feb 28", "Mar 1"];
+ $scope.series = ['Series A'];
  $scope.data = [
-   [65, 59, 80, 81, 56, 55, 40],
-   [28, 48, 40, 19, 86, 27, 90]
+   [7, 16, 16, 9, 19, 20, 6, 9],
  ];
  $scope.onClick = function (points, evt) {
    console.log(points, evt);
  };
- $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
+ $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }];
  $scope.options = {
    scales: {
      yAxes: [
@@ -36,12 +35,6 @@ angular.module('waterApp').controller('TotalController', function($http, $locati
          display: true,
          position: 'left'
        },
-       {
-         id: 'y-axis-2',
-         type: 'linear',
-         display: true,
-         position: 'right'
-       }
      ]
    }
  };
