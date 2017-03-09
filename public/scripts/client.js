@@ -1,6 +1,6 @@
 //routing
 angular
-.module("waterApp", ['ngRoute'])
+.module("waterApp", ['ngRoute', 'chart.js'])
 .config(function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 
